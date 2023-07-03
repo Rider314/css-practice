@@ -1,0 +1,30 @@
+:root {
+  background: pink;  
+}
+html {
+  max-width: 720px;
+  background: blue;
+}
+
+body {
+  background: #fff;
+}
+* {
+  color:red;
+}
+
+.box {
+  background: grey;
+}
+
+#user {
+  color: green;
+}
+
+h1, h2#user, button {
+  color: yellow;
+}
+
+div > p {
+  color: aqua;
+}
