@@ -1,0 +1,62 @@
+<header class="page_block">
+	<div class="">
+		{{#with header}}
+		<div class="header">
+			<div class="logo">
+				<span class="badge text-bg-primary">{{brandName}}</span>
+			</div>
+
+		<nav class="header_nav">
+			<div class="header_nav_right">
+				<div class="nav {{#if isVertical}}nav_vertical{{else}}nav_inLine{{/if}}">
+					{{#each links}}
+					<a href="{{url}}" class="nav_link">{{text}}</a>
+					{{/each}}
+				</div>
+			</div>
+		</nav>
+
+		</div>
+
+		<div class="header_bottom">
+			<div>
+			<div class="header_badge"></div>
+				{{#with ad}}
+					<p>{{text}} </p>
+					<a href="#" class="nav_link">: {{url}}</a>
+				{{/with}}
+			</div>
+			<div>Users online: {{userOnline}}</div>
+		</div>
+		
+		{{/with}}
+	</div>
+</header>
+
+<div>
+	{{#with hero}}
+		<div class="hero">
+			<h1 class="hero_title">{{title}}</h1>
+			<p class="hero_description">{{description}}</p>
+			<a href="{{button.url}}" class="button hero_button">{{button.text}}</a>
+		</div>
+	{{/with}}
+</div>	
+
+<div class="about">
+	{{#with about}}
+		<h1 class="">{{heading}}</h1>
+		<p class="">{{info}}</p>
+	{{/with}}
+</div>
+
+<div class="our_articles">
+	<h1 class="hero_title">Our Articles</h1>
+	<a href="#" class="button article_button">View All</a>
+</div>
+
+<div class="articles">
+	{{> articleCardDark}}
+</div>
+	
+{{> footerDark}}
